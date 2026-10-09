@@ -172,6 +172,15 @@ button{font:inherit}
 @media(max-width:640px){.site-header{padding-inline:18px}.brand-symbol{width:34px;height:34px}.brand-copy strong{font-size:8px}.brand-copy span{font-size:7px}.main-nav.is-open{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{display:flex;flex-direction:column;align-items:stretch;padding:56px 24px 73px;gap:25px}.hero:before{inset:10px}.hero-copy{order:0}.hero h1{font-size:clamp(48px,13vw,70px)}.hero-alias{font-size:20px}.hero-description{font-size:13px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-detail{flex-wrap:wrap;font-size:8px}.portrait-stage{order:1;min-height:350px;margin:0 8px}.portrait-orbit{inset:4% 1%}.portrait-card{width:min(84%,310px)}.portrait-inner{min-height:330px}.portrait-monogram{width:120px;height:120px;font-size:72px}.floating-note{right:-7px;bottom:0;max-width:165px;padding:12px 14px}.floating-note p{font-size:18px}.scroll-cue{bottom:18px;white-space:nowrap}.section{padding:62px 23px}.section-heading{margin-bottom:31px}.section-heading h2{font-size:43px}.intro-grid{grid-template-columns:1fr;gap:26px}.intro-marker{display:flex;align-items:center;gap:16px;padding-top:10px}.intro-marker strong{margin-top:0;font-size:34px}.intro-marker small{margin:0}.values-grid{grid-template-columns:1fr;gap:12px}.value-card{min-height:0;padding:25px}.value-card .card-number{margin-top:19px}.eulogy-feature{grid-template-columns:1fr}.feature-aside{min-height:310px;padding:35px}.feature-cross{position:absolute;right:40px;top:70px;font-size:100px;opacity:.4}.feature-aside blockquote{max-width:300px;font-size:27px}.feature-copy{padding:45px 27px 52px}.page-cards{grid-template-columns:1fr}.page-card{min-height:170px;padding:22px}.page-card h3{margin-top:15px}.scripture-section:before{left:-35px}.scripture-section:after{right:-35px}.scripture-quote{font-size:35px}.site-footer{align-items:flex-start;flex-direction:column;padding:28px 22px}.footer-note{text-align:left;max-width:100%}.footer-links{gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media print{.site-header,.progress-track,.hero-actions,.scroll-cue,.candle-button,.candle-count,.candle-confirmation,.footer-links{display:none!important}.hero{display:block;min-height:0;background:white!important;color:#102820;padding:30px}.hero h1,.hero-alias,.hero-description,.hero-scripture{color:#102820}.portrait-stage{display:none}.section,.eulogy-feature,.scripture-section,.remembrance-section{break-inside:avoid;background:white!important;color:#102820;padding:24px}.reveal{opacity:1;transform:none}.feature-copy h2,.feature-copy p,.feature-aside blockquote{color:#102820}.site-footer{background:white;color:#102820}}
+
+/* The memorial portrait asset is rendered inside the framed hero image. */
+.portrait-inner .portrait-photo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block;filter:saturate(.94);background:#19392d}
+.portrait-inner .portrait-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,22,16,.12) 0%,rgba(8,22,16,0) 35%,rgba(8,22,16,.06) 55%,rgba(8,22,16,.72) 100%)}
+.portrait-inner:before,.portrait-inner:after{z-index:2;pointer-events:none}
+.portrait-inner .portrait-cross,.portrait-inner .portrait-bottom-label{z-index:3;text-shadow:0 2px 9px rgba(0,0,0,.75)}
+.portrait-inner.has-photo .portrait-monogram{display:none}
+.portrait-inner:not(.has-photo) .portrait-shade{display:none}
+
 </style>
 </head>
 <body>
@@ -217,9 +226,11 @@ button{font:inherit}
 <div class="portrait-orbit" aria-hidden="true"></div>
 <div class="portrait-card">
 <div class="portrait-inner">
+<img class="portrait-photo" src="public/images/hannah-nyambura-karanja.jpg" alt="Hannah Nyambura Karanja, lovingly known as Wa Ruth" onload="this.parentElement.classList.add('has-photo')" onerror="this.hidden=true;this.parentElement.classList.remove('has-photo')">
+<span class="portrait-shade" aria-hidden="true"></span>
 <span class="portrait-cross" aria-hidden="true">✝</span>
 <div class="portrait-monogram" aria-hidden="true">H</div>
-<div class="portrait-bottom-label" data-en="Her cherished photograph can be placed here" data-ki="Mbica yake ya bata no ĩikwo haha">Her cherished photograph can be placed here</div>
+<div class="portrait-bottom-label" data-en="A life cherished · a love remembered" data-ki="Ũtũũro wendete · wendo ũririkanwo">A life cherished · a love remembered</div>
 </div>
 <div class="portrait-caption"><span>Hannah Nyambura Karanja</span><span>Wa Ruth · Forever remembered</span></div>
 </div>
