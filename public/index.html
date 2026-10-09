@@ -267,6 +267,18 @@ button{font:inherit}
 
 @media print{.site-header,.progress-track,.hero-actions,.scroll-cue,.candle-button,.candle-count,.candle-confirmation,.footer-links{display:none!important}.hero{display:block;min-height:0;background:white!important;color:#172843;padding:30px}.hero h1,.hero-alias,.hero-description,.hero-scripture{color:#172843}.portrait-stage{display:none}.section,.eulogy-feature,.scripture-section,.remembrance-section{break-inside:avoid;background:white!important;color:#172843;padding:24px}.reveal{opacity:1;transform:none}.feature-copy h2,.feature-copy p,.feature-aside blockquote{color:#172843}.site-footer{background:white;color:#172843}}
 
+
+/* Keep the memorial portrait itself clear: no circles, orbit or symbols over her photograph. */
+.portrait-orbit,
+.portrait-inner::before,
+.portrait-inner::after,
+.portrait-inner .portrait-monogram,
+.portrait-inner .portrait-cross {
+  display: none !important;
+  content: none !important;
+}
+.portrait-inner .portrait-photo { z-index: 0; }
+
 /* The memorial portrait asset is rendered inside the framed hero image. */
 .portrait-inner .portrait-photo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block;filter:saturate(.94);background:#223855}
 .portrait-inner .portrait-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,22,16,.12) 0%,rgba(8,22,16,0) 35%,rgba(8,22,16,.06) 55%,rgba(8,22,16,.72) 100%)}
@@ -322,13 +334,10 @@ button{font:inherit}
 <div class="hero-detail"><span data-en="Called home" data-ki="Atũire gũkũ">Called home</span><span class="dot"></span><time datetime="2026-10-07">7 October 2026</time><span class="dot"></span><span data-en="A life held in love" data-ki="Ũtũũro ũrĩ na wendo">A life held in love</span></div>
 </div>
 <div class="portrait-stage" aria-label="Memorial portrait placeholder">
-<div class="portrait-orbit" aria-hidden="true"></div>
 <div class="portrait-card">
 <div class="portrait-inner">
 <img class="portrait-photo" src="images/hannah-nyambura-karanja.jpg" alt="The Late Hannah Nyambura Karanja, lovingly known as Wa Ruth" onload="this.parentElement.classList.add('has-photo')" onerror="this.hidden=true;this.parentElement.classList.remove('has-photo')">
 <span class="portrait-shade" aria-hidden="true"></span>
-<span class="portrait-cross" aria-hidden="true">✝</span>
-<div class="portrait-monogram" aria-hidden="true">H</div>
 <div class="portrait-bottom-label" data-en="A life cherished · a love remembered" data-ki="Ũtũũro wendete · wendo ũririkanwo">A life cherished · a love remembered</div>
 </div>
 <div class="portrait-caption"><span>The Late Hannah Nyambura Karanja</span><span>Wa Ruth · Forever remembered</span></div>
