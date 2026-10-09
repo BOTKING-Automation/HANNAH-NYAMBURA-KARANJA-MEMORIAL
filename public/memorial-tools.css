@@ -1,0 +1,30 @@
+/* Accessible memorial-wide tools and interactive feature styles */
+.memorial-quick-tools{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px;max-width:min(560px,calc(100vw - 36px))}
+.memorial-quick-tools button,.memorial-quick-tools a{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:39px;padding:0 12px;border:1px solid rgba(185,150,85,.55);background:rgba(18,45,39,.96);color:#fff8e8;font:600 10px/1.3 'DM Sans',Arial,sans-serif;letter-spacing:.04em;box-shadow:0 7px 24px rgba(10,24,19,.17);cursor:pointer;backdrop-filter:blur(10px)}
+.memorial-quick-tools button:hover,.memorial-quick-tools a:hover{background:#285344;color:#fff}
+.memorial-candle-note{position:fixed;left:16px;bottom:18px;z-index:20;display:flex;align-items:center;gap:10px;padding:10px 13px;background:rgba(255,253,247,.96);border:1px solid rgba(185,150,85,.38);box-shadow:0 5px 20px rgba(20,30,20,.09);color:#17372d}
+.memorial-candle-note>span:first-child{font-size:21px}.memorial-candle-note strong,.memorial-candle-note small{display:block}.memorial-candle-note strong{font:600 12px/1.4 Georgia,serif}.memorial-candle-note small{font-size:9px;color:#777468}
+#memorialToast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);z-index:50;padding:11px 17px;background:#122d27;color:#fffdf7;border:1px solid #b99655;box-shadow:0 8px 25px #0002;font:500 12px/1.5 'DM Sans',Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:calc(100vw - 32px);text-align:center}
+#memorialToast.is-visible{opacity:1;transform:translate(-50%,0)}
+.tribute-composer{padding:28px;background:#fffdf7;border:1px solid rgba(185,150,85,.35);box-shadow:0 10px 35px rgba(25,40,30,.05)}
+.tribute-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.tribute-composer label{display:block;margin:0 0 7px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#42554a}
+.tribute-composer input,.tribute-composer select,.tribute-composer textarea{width:100%;min-height:44px;padding:12px;border:1px solid #d8d0be;background:#fff;color:#292b25;font:14px/1.6 'DM Sans',Arial,sans-serif}
+.tribute-composer textarea{min-height:155px;resize:vertical}
+.tribute-composer .full-width{grid-column:1/-1}
+.tribute-composer .permission-row{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.6;text-transform:none;letter-spacing:0;font-weight:400}
+.tribute-composer .permission-row input{width:17px;min-height:17px;margin-top:3px;flex:0 0 auto}
+.tribute-output{margin-top:20px;padding:18px;border:1px solid #c8b17d;background:#f7f3e9}
+.tribute-output pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 'DM Sans',Arial,sans-serif}
+.tribute-output-actions{display:flex;flex-wrap:wrap;gap:10px}
+.memorial-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:25px 0}
+.memorial-feature-card{padding:20px;background:#fffdf7;border:1px solid rgba(185,150,85,.3)}
+.memorial-feature-card .feature-symbol{font-size:25px;color:#a18148}
+.memorial-feature-card h3{font:600 23px/1.2 Georgia,serif;color:#17372d;margin:9px 0}
+.memorial-feature-card p{font-size:12px;line-height:1.8;color:#6d6d61}
+.gallery-search-wrap{padding:0 7vw 25px;background:#f7f3e9}
+.gallery-search-wrap input{width:min(520px,100%);min-height:45px;padding:12px 15px;border:1px solid #cdbb94;background:#fffdf7;font:14px 'DM Sans',Arial,sans-serif}
+[hidden]{display:none!important}
+@media(max-width:700px){.memorial-quick-tools{left:10px;right:10px;bottom:10px;justify-content:center;gap:5px}.memorial-quick-tools button,.memorial-quick-tools a{font-size:9px;min-height:36px;padding:0 9px}.memorial-candle-note{left:10px;bottom:57px;padding:7px 10px}.memorial-candle-note strong{font-size:11px}.memorial-candle-note small{font-size:8px}.tribute-composer{padding:17px}.tribute-form-grid,.memorial-feature-grid{grid-template-columns:1fr}.tribute-composer .full-width{grid-column:auto}body{padding-bottom:55px}}
+@media print{.memorial-quick-tools,.memorial-candle-note,#memorialToast,.mobile-menu-toggle,nav,.page-cta,.eulogy-bottom-actions,.gallery-upload-panel,.gallery-lightbox{display:none!important}body{background:#fff!important;color:#111!important;padding:0!important}.page-content,.eulogy-document,.eulogy-section{box-shadow:none!important;background:#fff!important}a{color:#111!important;text-decoration:none!important}.memorial-portrait{max-height:300px}.tribute-composer{display:none!important}}
+@media(prefers-reduced-motion:reduce){#memorialToast{transition:none!important}}
