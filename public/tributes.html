@@ -1,25 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#102b24">
-<meta name="description" content="Words of remembrance and tributes for Hannah Nyambura Karanja, lovingly known as Wa Ruth.">
-<title>Tributes | Hannah Nyambura Karanja (Wa Ruth)</title>
-<link rel="stylesheet" href="theme.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b24"><meta name="description" content="Share a remembrance or prepare a tribute for Hannah Nyambura Karanja (Wa Ruth).">
+<title>Tributes &amp; Remembrance | Hannah Nyambura Karanja (Wa Ruth)</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="memorial-tools.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header class="topbar"><a class="brand" href="index.html" aria-label="Memorial home"><span class="brand-mark">✧</span><span>IN LOVING MEMORY</span></a>
-<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="story.html">Her Story</a><a href="memories.html">Memories</a><a href="eulogy.html">Eulogy</a><a href="service.html">Farewell</a><a href="gallery.html">Gallery</a><a href="prayers.html">Faith &amp; Prayer</a><a href="tributes.html">Tributes</a><a href="family.html">Family</a></nav></header>
-<section class="page-hero"><p class="eyebrow">WORDS THAT KEEP LOVE CLOSE</p><div class="cross">✝</div><h1>Tributes &amp; <em>Remembrance</em></h1><p>A place for family and friends to honour Hannah's memory with words, stories and prayers.</p></section>
-<main id="main-content" class="page-content"><p class="lead">A tribute is a small way of saying: your life mattered, your love is remembered, and your place in our story remains. This page is dedicated to Hannah Nyambura Karanja, lovingly known as Wa Ruth.</p>
-<h2>A message of love</h2><p>To those who loved Hannah: there is no perfect sentence for a loss this personal. You may write about a moment you shared, a lesson she taught, a prayer you remember, a quality you admired, or simply what you wish you could tell her today.</p><p>To her beloved grandchild, Hannah was more than a grandmother. She was like a mother, a person who understood and encouraged, and someone whose prayers helped nurture faith, hope and courage. That love is part of the reason this space exists.</p>
-<div class="memorial-quote">“Those we love leave their fingerprints on our hearts.”</div>
-<h2>Tribute writing prompts</h2><ul><li>My favourite memory of Hannah is…</li><li>One thing she taught me was…</li><li>I will always remember the way she…</li><li>A prayer or blessing I want to share with the family is…</li><li>The part of her legacy I hope to carry forward is…</li></ul>
-<h2>Share a tribute</h2><p>Write with kindness and respect. Please avoid sharing private family information, unverified claims, or another person's story without permission. The website owner can review and edit submitted messages before publication.</p>
-<div class="edit-note"><strong>Website editor:</strong> This repository is a static website. A tribute form will not automatically save or publish messages unless a backend or form service is connected. For now, collect tributes privately and add approved messages to this page's HTML yourself.</div>
-<h2>Family and friends' tributes</h2><div class="tribute-list"><article class="tribute-card"><p class="eyebrow">A PLACE FOR YOUR WORDS</p><h3>[Add approved tribute title]</h3><p>[Paste the tribute here after receiving permission from the writer.]</p><p class="muted">— [Name, if they wish to be identified]</p></article><article class="tribute-card"><p class="eyebrow">A PLACE FOR A MEMORY</p><h3>[Add approved memory title]</h3><p>[Add another family-approved message or memory here.]</p><p class="muted">— [Name or “A family memory”]</p></article></div>
-<div class="page-cta"><a class="button primary" href="gallery.html">View Shared Memories →</a><a class="button outline" href="family.html">Family Acknowledgements →</a></div></main>
+<header class="topbar"><a class="brand" href="index.html" aria-label="Memorial home"><span class="brand-mark">✧</span><span>IN LOVING MEMORY</span></a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">☰</button>
+<nav id="primary-navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="story.html">Her Story</a><a href="memories.html">Memories</a><a href="eulogy.html">Eulogy</a><a href="service.html">Farewell</a><a href="gallery.html">Gallery</a><a href="prayers.html">Faith &amp; Prayer</a><a aria-current="page" href="tributes.html">Tributes</a><a href="family.html">Family</a></nav></header>
+<section class="page-hero"><p class="eyebrow">WORDS THAT KEEP LOVE CLOSE</p><div class="cross">✝</div><h1>Tributes &amp; <em>Remembrance</em></h1><p>A place to prepare words of love, gratitude, prayer, and remembrance for Hannah.</p></section>
+<main id="main-content" class="page-content">
+<p class="lead">A tribute can be a favourite memory, a lesson she taught, a prayer you remember, or simply a few words you wish you could tell her today. Hannah Nyambura Karanja, lovingly known as Wa Ruth, remains part of the stories and hearts of those who loved her.</p>
+<div class="site-notice"><strong>How this works:</strong> You can write a tribute below, copy it, download it, or share it through WhatsApp. This GitHub Pages site does not have a shared database, so submissions are not automatically sent to the family or published for other visitors. Please share your tribute with the family for review before publication.</div>
+<h2>Prepare a tribute</h2>
+<form class="tribute-composer" id="tributeComposer">
+<div class="tribute-form-grid">
+<div><label for="tributeName">Your name (optional)</label><input id="tributeName" name="tributeName" maxlength="100" autocomplete="name" placeholder="How should we credit you?"></div>
+<div><label for="tributeRelation">Your relationship (optional)</label><select id="tributeRelation" name="tributeRelation"><option value="">Choose if you wish</option><option>Family</option><option>Friend</option><option>Church community</option><option>Neighbour</option><option>Colleague</option><option>Other</option></select></div>
+<div class="full-width"><label for="tributeMessage">Your words of remembrance</label><textarea id="tributeMessage" name="tributeMessage" required maxlength="5000" placeholder="Share a memory, a lesson, a prayer, or what Hannah meant to you…"></textarea><small>Up to 5,000 characters. Please do not include private information about other people.</small></div>
+<label class="permission-row full-width"><input type="checkbox" name="publishPermission" value="yes"><span>I give permission for the family to review this message for possible publication. I understand it will not be published automatically.</span></label>
+<div class="full-width"><button class="button primary" type="submit">Prepare my tribute <span>↗</span></button></div>
+</div></form>
+<section class="tribute-output" id="tributeOutput" hidden aria-live="polite"><h3>Your tribute draft is ready</h3><pre></pre><div class="tribute-output-actions"><button class="button primary" type="button" id="copyTribute">Copy tribute</button><button class="button outline" type="button" id="downloadTribute">Download .txt</button><a class="button outline" id="whatsappTribute" href="https://wa.me/" target="_blank" rel="noopener">Share via WhatsApp ↗</a></div><p class="muted">Please review the message before sharing. Nothing is posted publicly from this form.</p></section>
+<h2>Writing prompts</h2><ul><li>My favourite memory of Hannah is…</li><li>One thing she taught me was…</li><li>I will always remember the way she…</li><li>A prayer or blessing I want to share with the family is…</li><li>The part of her legacy I hope to carry forward is…</li></ul>
+<h2>Approved family tributes</h2><div class="tribute-list"><article class="tribute-card"><p class="eyebrow">FAMILY MEMORY</p><h3>A place for a shared memory</h3><p>Family-approved tributes can be added here by the website editor after permission has been confirmed.</p></article></div>
+<div class="page-cta"><a class="button primary" href="gallery.html">View Shared Memories →</a><a class="button outline" href="family.html">Family Acknowledgements →</a></div>
+</main>
 <footer><span>In loving memory of Hannah Nyambura Karanja (Wa Ruth) · 7 October 2026</span><a href="index.html">Return Home ↑</a></footer>
+<script src="memorial-tools.js" defer></script><script>document.querySelector('.mobile-menu-toggle')?.addEventListener('click',function(){const nav=document.getElementById('primary-navigation');const open=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open);});</script>
 </body></html>
