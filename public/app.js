@@ -5,7 +5,7 @@ form?.addEventListener('submit', async (event) => {
   const name = document.getElementById('tributeName').value.trim();
   const message = document.getElementById('tributeMessage').value.trim();
   if (!name || !message) { status.textContent = 'Please add your name and a message.'; return; }
-  const tribute = 'A tribute for our beloved grandmother\nFrom: ' + name + '\n\n' + message;
+  const tribute = 'A tribute for Hannah Nyambura Karanja (Wa Ruth)\\nFrom: ' + name + '\\n\\n' + message;
   try {
     await navigator.clipboard.writeText(tribute);
     status.textContent = 'Your tribute has been copied. You can now paste it into a message to the family.';
