@@ -170,7 +170,101 @@ button{font:inherit}
 @media(max-width:1120px){.site-header{gap:13px;padding-inline:24px}.main-nav{gap:14px}.main-nav a{font-size:8px;letter-spacing:.07em}.header-cta{padding-inline:12px}.hero{padding-inline:6vw;gap:35px}.floating-note{right:-2%}}
 @media(max-width:880px){.site-header{min-height:72px;flex-wrap:wrap}.menu-toggle{display:block;margin-left:auto}.header-cta{display:none}.main-nav{display:none;order:4;width:100%;padding:9px 0 20px;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 12px}.main-nav.is-open{display:grid}.main-nav a{padding:10px 0;font-size:9px;border-bottom:1px solid rgba(194,161,100,.18)}.language-picker{margin-left:0;padding-left:0;border-left:0;justify-content:flex-start}.language-picker button{padding:7px}.hero{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);min-height:0;padding-block:65px 80px}.hero h1{font-size:clamp(46px,7.4vw,72px)}.portrait-stage{min-height:420px}.portrait-inner{min-height:350px}.portrait-card{width:330px}.floating-note{right:-5%;bottom:3%;max-width:190px}.side-vertical{display:none}.intro-grid{grid-template-columns:.45fr 1.55fr;gap:35px}.page-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.site-header{padding-inline:18px}.brand-symbol{width:34px;height:34px}.brand-copy strong{font-size:8px}.brand-copy span{font-size:7px}.main-nav.is-open{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{display:flex;flex-direction:column;align-items:stretch;padding:56px 24px 73px;gap:25px}.hero:before{inset:10px}.hero-copy{order:0}.hero h1{font-size:clamp(48px,13vw,70px)}.hero-alias{font-size:20px}.hero-description{font-size:13px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-detail{flex-wrap:wrap;font-size:8px}.portrait-stage{order:1;min-height:350px;margin:0 8px}.portrait-orbit{inset:4% 1%}.portrait-card{width:min(84%,310px)}.portrait-inner{min-height:330px}.portrait-monogram{width:120px;height:120px;font-size:72px}.floating-note{right:-7px;bottom:0;max-width:165px;padding:12px 14px}.floating-note p{font-size:18px}.scroll-cue{bottom:18px;white-space:nowrap}.section{padding:62px 23px}.section-heading{margin-bottom:31px}.section-heading h2{font-size:43px}.intro-grid{grid-template-columns:1fr;gap:26px}.intro-marker{display:flex;align-items:center;gap:16px;padding-top:10px}.intro-marker strong{margin-top:0;font-size:34px}.intro-marker small{margin:0}.values-grid{grid-template-columns:1fr;gap:12px}.value-card{min-height:0;padding:25px}.value-card .card-number{margin-top:19px}.eulogy-feature{grid-template-columns:1fr}.feature-aside{min-height:310px;padding:35px}.feature-cross{position:absolute;right:40px;top:70px;font-size:100px;opacity:.4}.feature-aside blockquote{max-width:300px;font-size:27px}.feature-copy{padding:45px 27px 52px}.page-cards{grid-template-columns:1fr}.page-card{min-height:170px;padding:22px}.page-card h3{margin-top:15px}.scripture-section:before{left:-35px}.scripture-section:after{right:-35px}.scripture-quote{font-size:35px}.site-footer{align-items:flex-start;flex-direction:column;padding:28px 22px}.footer-note{text-align:left;max-width:100%}.footer-links{gap:12px}}
+
+/* Honour her name with a gentle arrival; let the dove pass quietly through the memorial sky. */
+.hero-title-honour {
+  transform-origin: left center;
+  animation: waRuthTitleRise 1.8s cubic-bezier(.16, 1, .3, 1) .12s both;
+}
+.hero-title-honour em {
+  text-shadow: 0 0 10px rgba(234, 216, 168, .12);
+  animation: waRuthGoldGlow 2.8s ease-out 1s both;
+}
+.dove-flight {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  height: 124px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.dove-flight img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: clamp(48px, 5.8vw, 78px);
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 4px 12px rgba(243, 233, 209, .2));
+  animation: waRuthDoveFlight 19s cubic-bezier(.45, 0, .55, 1) 1.1s infinite;
+  will-change: transform, opacity;
+}
+@keyframes waRuthTitleRise {
+  0% { opacity: 0; transform: translateY(18px) scale(.92); }
+  68% { opacity: 1; transform: translateY(-1px) scale(1.012); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes waRuthGoldGlow {
+  0% { text-shadow: 0 0 0 rgba(234, 216, 168, 0); }
+  42% { text-shadow: 0 0 28px rgba(234, 216, 168, .38); }
+  100% { text-shadow: 0 0 10px rgba(234, 216, 168, .12); }
+}
+@keyframes waRuthDoveFlight {
+  0% { transform: translate3d(110vw, 10px, 0) rotate(7deg); opacity: 0; }
+  7% { opacity: .9; }
+  25% { transform: translate3d(77vw, -2px, 0) rotate(2deg); opacity: .95; }
+  50% { transform: translate3d(45vw, -12px, 0) rotate(-3deg); opacity: .96; }
+  76% { transform: translate3d(10vw, 1px, 0) rotate(1deg); opacity: .88; }
+  92% { opacity: .72; }
+  100% { transform: translate3d(-125px, 15px, 0) rotate(6deg); opacity: 0; }
+}
+.dove-credit {
+  margin: 0;
+  max-width: 185px;
+  color: #829184;
+  font-size: 7px;
+  line-height: 1.7;
+  letter-spacing: .035em;
+}
+.dove-credit a {
+  color: #d1bd8c;
+  border-bottom: 1px solid rgba(209, 189, 140, .35);
+}
+.dove-credit a:hover { color: #fff1ce; }
+.site-footer { flex-wrap: wrap; }
+@media(max-width:880px) {
+  .hero { padding-top: 102px; }
+  .dove-flight { top: 9px; height: 82px; }
+  .dove-flight img { width: 56px; }
+}
+@media(max-width:640px) {
+  .hero { padding-top: 88px; }
+  .dove-flight { top: 8px; height: 70px; }
+  .dove-flight img { width: 42px; }
+  .dove-credit { text-align: left; max-width: 100%; }
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+@media(prefers-reduced-motion:reduce) {
+  .hero-title-honour,
+  .hero-title-honour em {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    text-shadow: none;
+  }
+  .dove-flight img {
+    animation: none !important;
+    opacity: .78;
+    transform: translate3d(48vw, 2px, 0);
+  }
+}
+
 @media print{.site-header,.progress-track,.hero-actions,.scroll-cue,.candle-button,.candle-count,.candle-confirmation,.footer-links{display:none!important}.hero{display:block;min-height:0;background:white!important;color:#102820;padding:30px}.hero h1,.hero-alias,.hero-description,.hero-scripture{color:#102820}.portrait-stage{display:none}.section,.eulogy-feature,.scripture-section,.remembrance-section{break-inside:avoid;background:white!important;color:#102820;padding:24px}.reveal{opacity:1;transform:none}.feature-copy h2,.feature-copy p,.feature-aside blockquote{color:#102820}.site-footer{background:white;color:#102820}}
 
 /* The memorial portrait asset is rendered inside the framed hero image. */
@@ -210,12 +304,13 @@ button{font:inherit}
 
 <main id="main-content">
 <section class="hero" id="home">
+<div class="dove-flight" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Peace_dove_at_flight.gif" alt="" width="296" height="424" decoding="async"></div>
 <div class="side-vertical" aria-hidden="true">FOREVER LOVED · DEEPLY MISSED · ALWAYS REMEMBERED</div>
 <div class="hero-copy">
 <p class="eyebrow" data-en="A life remembered · a faith that remains" data-ki="Ũtũũro ũrĩkĩrĩtwo · wĩtĩkio ũtũũraga">A life remembered · a faith that remains</p>
 <span class="hero-cross" aria-hidden="true">✝</span>
 <p class="hero-overline" data-en="THE LATE · IN LOVING MEMORY OF" data-ki="THE LATE · TŨKŨRIRIKANA NA WENDO">THE LATE · IN LOVING MEMORY OF</p>
-<h1>The Late Hannah Nyambura <em>Karanja</em></h1>
+<h1 class="hero-title-honour">The Late Hannah Nyambura <em>Karanja</em></h1>
 <p class="hero-alias" data-en="Lovingly known as Wa Ruth" data-ki="Aitwo na wendo Wa Ruth">Lovingly known as Wa Ruth</p>
 <div class="hero-divider" aria-hidden="true"><i></i>✧<i></i></div>
 <p class="hero-description" data-en="More than a grandmother. A motherly heart, a listening ear, and a woman whose prayers helped plant faith, hope and courage." data-ki="Mũnene mũno kũruga nyanya tu. Ngoro ya nyina, gũthikĩrĩria, na mahoya marĩa maatũma wĩtĩkio, mwĩhoko na hinya bikue." >More than a grandmother. A motherly heart, a listening ear, and a woman whose prayers helped plant faith, hope and courage.</p>
@@ -338,6 +433,7 @@ button{font:inherit}
 <a class="footer-brand" href="#top"><span class="brand-symbol" aria-hidden="true">✧</span><span><strong>THE LATE HANNAH NYAMBURA KARANJA</strong><small>Wa Ruth · Always remembered</small></span></a>
 <div class="footer-links"><a href="eulogy.html" data-en="Eulogy" data-ki="Eulogy">Eulogy</a><a href="story.html" data-en="Her story" data-ki="Ũhoro wake">Her story</a><a href="gallery.html" data-en="Gallery" data-ki="Mbica">Gallery</a><a href="tributes.html" data-en="Tributes" data-ki="Ciugo">Tributes</a></div>
 <p class="footer-note" data-en="Created with love to honour a precious life. Gĩkũyũ wording is an initial draft for family review." data-ki="Kĩririkania gĩthondeketwo na wendo. Ciugo cia Gĩkũyũ nĩ draft cia mbere; familia no ĩthuthurie.">Created with love to honour a precious life. Gĩkũyũ wording is an initial draft for family review.</p>
+<p class="dove-credit">Dove animation: <a href="https://commons.wikimedia.org/wiki/File:Peace_dove_at_flight.gif" target="_blank" rel="noopener noreferrer">Nevit Dilmen</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
 </footer>
 <script>
 (function(){
