@@ -367,3 +367,21 @@ footer a{white-space:nowrap}
 @media(max-width:600px){.gallery-masthead{min-height:420px;padding:57px 24px 47px}.gallery-masthead-frame{inset:9px}.gallery-masthead h1{font-size:43px}.gallery-intro{font-size:18px}.gallery-welcome{padding:50px 7vw 35px}.gallery-collection,.gallery-collection-soft{padding:28px 6vw 48px}.gallery-section-heading{align-items:start}.gallery-section-heading h2{font-size:33px}.gallery-index{font-size:7px}.gallery-feature-grid,.gallery-standard-grid,.gallery-two-grid{grid-template-columns:1fr;gap:17px}.gallery-photo-featured .gallery-image-button,.gallery-image-button{aspect-ratio:4/3}.gallery-photo-card figcaption strong{font-size:24px}.gallery-upload-panel{grid-template-columns:1fr;padding:48px 7vw}.upload-panel-symbol{width:48px;height:48px}.upload-path{align-items:flex-start}.upload-path>span{width:100%}.copy-path-button{margin-left:0}.gallery-closing{padding:48px 7vw}.gallery-closing .page-cta{flex-direction:column}.gallery-closing .button{width:100%}#gallery-navigation.is-open{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.gallery-photo-card,.gallery-image-button img{transition:none!important}}
 @media print{.gallery-masthead,.gallery-upload-panel,.gallery-lightbox,.mobile-menu-toggle{display:none!important}.gallery-collection{padding:15px 0}.gallery-image-button{break-inside:avoid}.gallery-photo-card{box-shadow:none}}
+
+
+/* Heartfelt remembrance moments shared across the memorial pages */
+.heartfelt-closing{position:relative;isolation:isolate;overflow:hidden;padding:clamp(62px,8vw,108px) clamp(24px,9vw,140px);margin:0;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(185,150,85,.16),transparent 48%),linear-gradient(145deg,#102b24,#183b30 58%,#10251e);color:#fff8e8}
+.heartfelt-closing:before{content:"";position:absolute;inset:13px;border:1px solid rgba(225,202,146,.25);pointer-events:none;z-index:-1}
+.heartfelt-closing:after{content:"";position:absolute;left:50%;top:-118px;width:340px;height:340px;transform:translateX(-50%);border:1px solid rgba(225,202,146,.12);border-radius:50%;box-shadow:0 0 0 24px rgba(225,202,146,.025),0 0 0 52px rgba(225,202,146,.02);pointer-events:none;z-index:-1}
+.heartfelt-closing .eyebrow{justify-content:center;color:#e1ca92}
+.heartfelt-closing .eyebrow:before{background:#c2a164}
+.heartfelt-closing h2{max-width:870px;margin:0 auto 22px;font:500 clamp(38px,5.2vw,66px)/.99 var(--serif);letter-spacing:-.025em;color:#fff8e8}
+.heartfelt-closing h2 em{color:#e1ca92;font-weight:400}
+.heartfelt-closing>p:not(.eyebrow){max-width:740px;margin:15px auto;color:#e0e1d6;font-size:13px;line-height:2.05}
+.heartfelt-closing blockquote{max-width:760px;margin:32px auto 20px;color:#f4e7c9;font:italic clamp(25px,3.3vw,39px)/1.22 var(--serif)}
+.heartfelt-closing blockquote:before{content:"“";display:block;margin-bottom:-5px;color:#c2a164;font:70px/.7 var(--serif)}
+.heartfelt-closing .heartfelt-signoff{margin-top:27px!important;color:#e1ca92!important;font:italic 21px/1.5 var(--serif)!important}
+.heartfelt-closing .heartfelt-flourish{display:block;margin-bottom:18px;color:#c2a164;font:39px/1 var(--serif)}
+@media(max-width:600px){.heartfelt-closing{padding:55px 25px}.heartfelt-closing:before{inset:9px}.heartfelt-closing h2{font-size:43px}.heartfelt-closing>p:not(.eyebrow){font-size:12px}.heartfelt-closing blockquote{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.heartfelt-closing:after{animation:none!important}}
+@media print{.heartfelt-closing{break-inside:avoid;background:white!important;color:#102b24!important;border:1px solid #c2a164}.heartfelt-closing h2,.heartfelt-closing>p:not(.eyebrow),.heartfelt-closing blockquote,.heartfelt-closing .heartfelt-signoff{color:#102b24!important}}
