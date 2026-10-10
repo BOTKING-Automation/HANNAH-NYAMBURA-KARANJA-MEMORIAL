@@ -285,7 +285,7 @@ button{font:inherit}
 <a href="public/memories.html" data-en="Memories" data-ki="Mĩrĩgo">Memories</a>
 <a href="public/gallery.html" data-en="Gallery" data-ki="Mbica">Gallery</a>
 <a href="public/prayers.html" data-en="Faith &amp; prayer" data-ki="Wĩtĩkio na mahoya">Faith &amp; prayer</a>
-<div class="language-picker" aria-label="Choose language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="ki" aria-pressed="false">GĨKŨYŨ</button></div>
+<div class="language-picker" aria-label="Choose language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="ki" aria-pressed="false">GĨKŨYŨ</button><button type="button" data-lang="sw" aria-pressed="false">SWAHILI</button></div>
 </nav>
 <a class="header-cta" href="public/eulogy.html"><span data-en="Read the eulogy" data-ki="Ũrĩke eulogy">Read the eulogy</span><span aria-hidden="true">↗</span></a>
 </header>
@@ -302,7 +302,7 @@ button{font:inherit}
 <p class="eyebrow" data-en="A life remembered · a faith that remains" data-ki="Ũtũũro ũrĩkĩrĩtwo · wĩtĩkio ũtũũraga">A life remembered · a faith that remains</p>
 <span class="hero-cross" aria-hidden="true">✝</span>
 <p class="hero-overline" data-en="THE LATE · IN LOVING MEMORY OF" data-ki="THE LATE · TŨKŨRIRIKANA NA WENDO">THE LATE · IN LOVING MEMORY OF</p>
-<h1 class="hero-title-honour">The Late Hannah Nyambura <em>Karanja</em></h1>
+<h1 class="hero-title-honour" data-en="The Late Hannah Nyambura &lt;em&gt;Karanja&lt;/em&gt;" data-ki="The Late Hannah Nyambura &lt;em&gt;Karanja&lt;/em&gt;">The Late Hannah Nyambura <em>Karanja</em></h1>
 <p class="hero-alias" data-en="Lovingly known as Wa Ruth" data-ki="Aitwo na wendo Wa Ruth">Lovingly known as Wa Ruth</p>
 <div class="hero-divider" aria-hidden="true"><i></i>✧<i></i></div>
 <p class="hero-description" data-en="More than a grandmother. A motherly heart, a listening ear, and a woman whose prayers helped plant faith, hope and courage." data-ki="Mũnene mũno kũruga nyanya tu. Ngoro ya nyina, gũthikĩrĩria, na mahoya marĩa maatũma wĩtĩkio, mwĩhoko na hinya bikue." >More than a grandmother. A motherly heart, a listening ear, and a woman whose prayers helped plant faith, hope and courage.</p>
@@ -452,7 +452,95 @@ button{font:inherit}
  showCount();
  candleButton.addEventListener('click',()=>{count++;try{localStorage.setItem(candleKey,String(count))}catch(_){}showCount();confirmation.textContent='A moment of love and remembrance for Wa Ruth. May God comfort everyone who misses her.';candleButton.innerHTML='<span aria-hidden="true">🕯</span><span>Another candle lit · Thank you</span>';});
  const languageButtons=[...document.querySelectorAll('[data-lang]')],languageText=[...document.querySelectorAll('[data-en][data-ki]')];
- function setLanguage(lang){document.documentElement.lang=lang==='ki'?'ki':'en';languageText.forEach(el=>{const v=el.dataset[lang];if(v!==undefined)el.innerHTML=v});languageButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('hannah-memorial-language',lang)}catch(_){}}
+ const swTranslations={
+  "Her legacy": "Urithi wake",
+  "Eulogy": "Hotuba ya kumbukumbu",
+  "Her story": "Hadithi yake",
+  "Memories": "Kumbukumbu",
+  "Gallery": "Picha",
+  "Faith & prayer": "Imani na sala",
+  "Read the eulogy": "Soma hotuba ya kumbukumbu",
+  "A life remembered · a faith that remains": "Maisha yanayokumbukwa · imani inayoendelea",
+  "THE LATE · IN LOVING MEMORY OF": "MAREHEMU · KWA KUMBUKUMBU YA UPENDO",
+  "Lovingly known as Wa Ruth": "Anayejulikana kwa upendo kama Wa Ruth",
+  "More than a grandmother. A motherly heart, a listening ear, and a woman whose prayers helped plant faith, hope and courage.": "Zaidi ya nyanya. Alikuwa na moyo wa kimama, sikio la kusikiliza, na alikuwa mwanamke ambaye sala zake zilisaidia kukuza imani, tumaini na ujasiri.",
+  "Read her eulogy": "Soma hotuba yake ya kumbukumbu",
+  "Explore her legacy": "Chunguza urithi wake",
+  "Called home": "Ameitwa nyumbani",
+  "A life held in love": "Maisha yaliyokumbatiwa kwa upendo",
+  "A life cherished · a love remembered": "Maisha yaliyothaminiwa · upendo unaokumbukwa",
+  "A love that stays beyond goodbye.": "Upendo unaobaki hata baada ya kuagana.",
+  "A LEGACY OF LOVE & FAITH": "URITHI WA UPENDO NA IMANI",
+  "Scroll to remember": "Sogeza ili kukumbuka",
+  "With love, we remember": "Tunamkumbuka kwa upendo",
+  "Some lives leave a light that never fades.": "Baadhi ya maisha huacha mwanga usiozimika.",
+  "This is a place for the people who miss her: to say her name with tenderness, return to the moments they treasure, and remember the faith, courage and hope she helped plant. Some losses change the shape of our days; a love like hers remains part of who we are.": "Hapa ni mahali kwa wote wanaomkosa: kutaja jina lake kwa upendo, kukumbuka nyakati wanazothamini, na kuhifadhi imani, ujasiri na tumaini alilosaidia kukuza. Baadhi ya misiba hubadilisha maisha yetu; upendo kama wake hubaki kuwa sehemu yetu.",
+  "A name held with love": "Jina linalokumbukwa kwa upendo",
+  "Remembering the heart that felt like home.": "Kukumbuka moyo uliotufanya tujisikie nyumbani.",
+  "To her family and everyone who held her dear, Hannah was more than a title or a name. She was a beloved grandmother with a motherly heart: remembered for listening, encouraging, praying, and helping people find hope when life felt heavy. Each person carries a different part of her story, and every memory deserves a place in this shared tribute.": "Kwa familia yake na wote waliompenda, Hannah alikuwa zaidi ya cheo au jina. Alikuwa nyanya mpendwa mwenye moyo wa kimama: anakumbukwa kwa kusikiliza, kutia moyo, kusali na kuwasaidia watu kupata tumaini maisha yalipokuwa magumu. Kila mtu ana kumbukumbu yake, na kila kumbukumbu inastahili nafasi katika heshima hii ya pamoja.",
+  "To her family and the people who knew her, Hannah was more than a grandmother. She was a beloved elder with a motherly heart, remembered for listening, encouraging, praying, and helping others feel less alone. Every relative and friend carries a different part of her story; together, those memories honour the many ways her life touched others.": "Kwa familia yake na wote waliomfahamu, Hannah alikuwa zaidi ya nyanya. Alikuwa mzee mpendwa mwenye moyo wa kimama, anayekumbukwa kwa kusikiliza, kutia moyo, kusali na kuwafanya wengine wasijisikie wapweke. Kila ndugu na rafiki ana sehemu yake ya hadithi yake; kwa pamoja, kumbukumbu hizo zinaheshimu jinsi maisha yake yalivyowagusa wengi.",
+  "Her story lives in the things we still carry: the prayers she prayed, the encouragement we remember, the love that made us feel understood, and the faith she helped plant in our hearts. We cannot return to yesterday, but we can honour what she placed within us.": "Hadithi yake inaishi katika yale tunayobeba mioyoni: sala zake, maneno yake ya kututia moyo, upendo uliotufanya tuhisi tunaeleweka, na imani aliyosaidia kupanda ndani yetu. Hatuwezi kurudisha jana, lakini tunaweza kuheshimu alichotuachia.",
+  "Discover her story": "Fahamu hadithi yake",
+  "What her life continues to give": "Zawadi tunazoendelea kupata kutokana na maisha yake",
+  "A legacy built on <em>love, faith &amp; courage.</em>": "Urithi uliojengwa juu ya <em>upendo, imani na ujasiri.</em>",
+  "A legacy built on <em>love, faith & courage.</em>": "Urithi uliojengwa juu ya <em>upendo, imani na ujasiri.</em>",
+  "The most lasting gifts are often the ones we carry inside us.": "Zawadi zinazodumu zaidi mara nyingi ni zile tunazobeba mioyoni.",
+  "A motherly heart": "Moyo wa kimama",
+  "She made people feel seen and understood. That kind of love becomes a shelter the heart can return to long after goodbye.": "Aliwafanya watu wajisikie kuonekana na kueleweka. Upendo wa aina hiyo huwa kimbilio ambalo moyo unaweza kurejea hata baada ya kuagana.",
+  "A faith she shared": "Imani aliyoshiriki",
+  "She helped plant a faith that can still be held in the hardest season. Her prayers and example remain part of the hope she gave.": "Alisaidia kupanda imani inayoweza kutushikilia hata katika nyakati ngumu zaidi. Sala na mfano wake vinaendelea kuwa sehemu ya tumaini alilotupa.",
+  "A light carried forward": "Mwanga unaoendelezwa",
+  "Every act of kindness, every prayer and every brave next step can help carry her love forward.": "Kila tendo la wema, kila sala na kila hatua ya ujasiri vinaweza kuendeleza upendo wake.",
+  "Words of remembrance": "Maneno ya kumbukumbu",
+  "“Some people teach us how to keep going; we carry their love into every step that follows.”": "“Baadhi ya watu hutufundisha kuendelea; tunabeba upendo wao katika kila hatua inayofuata.”",
+  "The eulogy": "Hotuba ya kumbukumbu",
+  "Thank you, Wa Ruth. <em>We will remember.</em>": "Asante, Wa Ruth. <em>Tutakukumbuka.</em>",
+  "Wa Ruth, your absence is deeply felt by all who loved you. Your prayers, kindness, and encouragement helped people through difficult seasons, and the faith you shared continues to offer hope. Though we cannot gather with you again in the same way, we can keep saying thank you, honour your memory, and carry forward the good you planted in our family and community.": "Wa Ruth, wote waliokupenda wanahisi sana kutokuwepo kwako. Sala zako, wema na maneno ya kututia moyo viliwasaidia watu kupitia nyakati ngumu, na imani uliyoshiriki bado inatoa tumaini. Ingawa hatuwezi kukutana nawe tena kama zamani, tunaweza kuendelea kusema asante, kuheshimu kumbukumbu yako na kuendeleza mema uliyopanda katika familia na jamii yetu.",
+  "The full eulogy brings these reflections together in a loving tribute to her life, faith, family and enduring legacy.": "Hotuba kamili inakusanya tafakari hizi katika heshima yenye upendo kwa maisha yake, imani, familia na urithi wake unaodumu.",
+  "Read the full eulogy": "Soma hotuba kamili",
+  "A FAMILY TRIBUTE OF LOVE AND GRATITUDE": "HESHIMA YA FAMILIA YENYE UPENDO NA SHUKRANI",
+  "Our beloved Wa Ruth,<br><em>your love remains with us.</em>": "Wa Ruth wetu mpendwa,<br><em>upendo wako unabaki nasi.</em>",
+  "You were a beloved grandmother whose care reached across our family and community. You listened, encouraged, prayed, and helped people feel less alone. Each of us holds different memories of you, and every one of those memories belongs in this shared tribute.": "Ulikuwa nyanya mpendwa ambaye upendo na kujali kwake viligusa familia na jamii yetu. Ulisikiliza, ulitia moyo, ulisali na kuwasaidia watu wasijisikie wapweke. Kila mmoja wetu ana kumbukumbu tofauti zako, na kila kumbukumbu ina nafasi katika heshima hii ya pamoja.",
+  "Through your faith, prayers, and example, you helped point people toward God and nurtured faith, hope, and courage. We wish we could sit with you again, hear your voice, share our news, and thank you for all the small acts of love we may understand even more deeply now. We cannot bring yesterday back, but we can honour your life by supporting one another and passing your kindness to the next generation.": "Kupitia imani, sala na mfano wako, uliwaelekeza watu kwa Mungu na kukuza imani, tumaini na ujasiri. Tunatamani tungekaa nawe tena, kusikia sauti yako, kusimulia habari zetu na kukushukuru kwa matendo madogo ya upendo ambayo sasa tunayathamini zaidi. Hatuwezi kurudisha jana, lakini tunaweza kuheshimu maisha yako kwa kusaidiana na kupeleka wema wako kwa kizazi kijacho.",
+  "Through your faith, prayers, and example, you helped point people toward God and nurtured faith, hope, and courage. We wish we could sit with you again, hear your voice, share our news, and thank you for the small acts of love we understand even more deeply now. We cannot bring yesterday back, but we can honour your life by supporting one another and passing your kindness to the next generation.": "Kupitia imani, sala na mfano wako, uliwaelekeza watu kwa Mungu na kukuza imani, tumaini na ujasiri. Tunatamani tungekaa nawe tena, kusikia sauti yako na kushiriki habari zetu. Tunathamini zaidi matendo madogo ya upendo uliyotufanyia. Hatuwezi kurudisha jana, lakini tunaweza kuheshimu maisha yako kwa kusaidiana na kupeleka wema wako kwa kizazi kijacho.",
+  "We cannot bring yesterday back, but we can carry your love into tomorrow. We can keep praying, choose courage, encourage one another, and remember the faith you helped plant. When life feels heavy, your example can remind us to take one more step together.": "Hatuwezi kurudisha jana, lakini tunaweza kubeba upendo wako hadi kesho. Tunaweza kuendelea kusali, kuchagua ujasiri, kutiana moyo na kukumbuka imani uliyosaidia kukuza. Maisha yanapokuwa mazito, mfano wako unaweza kutukumbusha kuchukua hatua nyingine pamoja.",
+  "“Your voice may be quiet now, but the faith and love you shared continue to speak through all of us.”": "“Ingawa sauti yako sasa imenyamaza, imani na upendo ulioshiriki vinaendelea kuzungumza kupitia sisi sote.”",
+  "We miss you. We thank God for your life. We love you, Wa Ruth. We will keep your memory alive.": "Tunakukosa. Tunamshukuru Mungu kwa maisha yako. Tunakupenda, Wa Ruth. Tutaendelea kuhifadhi kumbukumbu yako.",
+  "Keep her memory close": "Endelea kumkumbuka",
+  "Explore her <em>memorial.</em>": "Tembelea <em>ukumbusho wake.</em>",
+  "Each part of this memorial holds space for a different way of remembering.": "Kila sehemu ya ukumbusho huu hutoa nafasi ya kumkumbuka kwa namna tofauti.",
+  "The Eulogy": "Hotuba ya kumbukumbu",
+  "A heartfelt tribute to her life, love and faith.": "Ujumbe wa dhati kuhusu maisha, upendo na imani yake.",
+  "Read the tribute": "Soma ujumbe",
+  "Her Story": "Hadithi yake",
+  "Return to the life and person behind the name.": "Rudi kumfahamu mtu aliyekuwa nyuma ya jina hilo.",
+  "Remember her life": "Kumbuka maisha yake",
+  "Memories &amp; Legacy": "Kumbukumbu na urithi",
+  "Memories & Legacy": "Kumbukumbu na urithi",
+  "Honour the love, lessons and meaning she leaves behind.": "Heshimu upendo, mafunzo na maana aliyoacha.",
+  "Explore memories": "Tazama kumbukumbu",
+  "Photo Gallery": "Matunzio ya picha",
+  "A place for family-approved photographs and treasured moments.": "Mahali pa picha zilizoidhinishwa na familia na nyakati zenye thamani.",
+  "Visit the gallery": "Tembelea matunzio",
+  "Faith &amp; Prayer": "Imani na sala",
+  "Faith & Prayer": "Imani na sala",
+  "Scripture, prayer and words for days when grief feels heavy.": "Maandiko, sala na maneno ya faraja kwa siku ambazo huzuni ni nzito.",
+  "Find comfort": "Pata faraja",
+  "Tributes": "Ujumbe wa kumbukumbu",
+  "Prepare a personal message to honour her memory and share it with family.": "Andaa ujumbe binafsi wa kuheshimu kumbukumbu yake na kuushiriki na familia.",
+  "Write a tribute": "Andika ujumbe",
+  "“The Lord is close to the brokenhearted and saves those who are crushed in spirit.”": "“Bwana yu karibu na waliovunjika moyo, naye huwaokoa waliopondeka rohoni.”",
+  "Faith does not ask us to stop missing her. It gives us somewhere to take the tears, and someone to lean on when our own strength runs low.": "Imani haitulazimishi kuacha kumkosa. Hutupa mahali pa kupeleka machozi yetu na mtu wa kumtegemea nguvu zetu zinapopungua.",
+  "Continue to faith &amp; prayer": "Endelea kwenye imani na sala",
+  "Continue to faith & prayer": "Endelea kwenye imani na sala",
+  "A quiet moment of remembrance": "Muda wa utulivu wa kumbukumbu",
+  "Light a candle. <em>Hold her close.</em>": "Washa mshumaa. <em>Mweke karibu moyoni.</em>",
+  "Pause for a moment. Remember her face, whisper her name, thank God for the time you had, or simply sit with the love and the ache. You do not have to find the perfect words.": "Tulia kwa muda. Kumbuka uso wake, tamka jina lake kwa sauti ya chini, mshukuru Mungu kwa muda mliokuwa pamoja, au kaa tu na upendo pamoja na maumivu. Huhitaji kutafuta maneno makamilifu.",
+  "Light a remembrance candle": "Washa mshumaa wa kumbukumbu",
+  "Created with love to honour a precious life. Gĩkũyũ wording is an initial draft for family review.": "Imetengenezwa kwa upendo ili kuheshimu maisha yenye thamani.",
+  "The Late Hannah Nyambura <em>Karanja</em>": "Marehemu Hannah Nyambura <em>Karanja</em>"
+};
+ function setLanguage(lang){document.documentElement.lang=lang==='ki'?'ki':lang==='sw'?'sw':'en';languageText.forEach(el=>{const v=lang==='sw'?(swTranslations[el.dataset.en]||el.dataset.en):el.dataset[lang];if(v!==undefined)el.innerHTML=v});languageButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('hannah-memorial-language',lang)}catch(_){}}
  languageButtons.forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
  let saved='en';try{saved=localStorage.getItem('hannah-memorial-language')||'en'}catch(_){}setLanguage(saved);
 })();
