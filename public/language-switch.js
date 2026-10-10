@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 const pages={
-'index.html':['KŨRIRIKANA CUCŨ WITŨ NA WENDO','Hannah Nyambura Karanja (Wa Ruth)','Wendo wake ndũthiraga; ũtũũraga ngoro-inĩ ciitũ.','Tũririkana Cucu witũ Wa Ruth na wendo mũingĩ. Aarĩ mũndũ wa bata kũrĩ nyũmba yake na arĩa othe aamendete. Nĩatũthikĩrĩriaga, atũhoeraga na atũheaga hinya na mwĩhoko. O mũndũ arĩ na kĩririkanio gĩake, na tũkĩheana maũndũ macio tũtũũria mĩtugo yake.',[['Wendo wake ũtũũraga','Wendo wa Cucu witũ ũtũheaga ũhooti na ũtũrutaga kũigua arĩa angĩ.'],['Maũndũ tũririkanaga','Tũririkane ciugo ciake, mahoya make na ihinda iria tũtũũraga hamwe nake.'],['Mĩtugo yake','Tũhota gũtũũria wendo wake tũkĩteithagia arĩa angĩ na tũkĩmahe hinya.']]],
+'index.html':['KŨRIRIKANA CUCU WITŨ NA WENDO','Hannah Nyambura Karanja (Wa Ruth)','Wendo wake ndũthiraga; ũtũũraga ngoro-inĩ ciitũ.','Tũririkana Cucu witũ Wa Ruth na wendo mũingĩ. Aarĩ mũndũ wa bata kũrĩ nyũmba yake na arĩa othe aamendete. Nĩatũthikĩrĩriaga, atũhoeraga na atũheaga hinya na mwĩhoko. O mũndũ arĩ na kĩririkanio gĩake, na tũkĩheana maũndũ macio tũtũũria mĩtugo yake.',[['Wendo wake ũtũũraga','Wendo wa Cucu witũ ũtũheaga ũhooti na ũtũrutaga kũigua arĩa angĩ.'],['Maũndũ tũririkanaga','Tũririkane ciugo ciake, mahoya make na ihinda iria tũtũũraga hamwe nake.'],['Mĩtugo yake','Tũhota gũtũũria wendo wake tũkĩteithagia arĩa angĩ na tũkĩmahe hinya.']]],
 'story.html':['ŨTŨŨRO WAKE · WĨTĨKIO · MĨTUGO YAKE','Ũhoro wa ũtũũro wa Cucu witũ','Cucu witũ Wa Ruth aarĩ mũndũ wa wendo na wa bata mũno.','Cucu witũ Wa Ruth aarĩ wa bata kũrĩ nyũmba yake na arĩa othe aamendete. Aathikĩrĩriaga andũ, akĩmahooya na akĩmahe hinya na mwĩhoko. O mũndũ arĩ na kĩririkanio gĩake; tũkĩheana maũndũ macio tũtũũria mĩtugo yake.',[['Mũndũ wa bata','Cucu witũ nĩatũthikĩrĩriaga na akĩmahe ũhooti.'],['Wĩtĩkio wake','Nĩatũrutire kũhooya, kwĩtĩkia Ngai na gũikara na mwĩhoko.'],['Mĩtugo ĩtũũraga','Tũhota gũtũũria wendo wake tũkĩteithagia arĩa marĩ na ruo.']]],
 'memories.html':['MAŨNDO TŨRIRIKANAGA','Maũndũ tũririkanaga na mĩtugo ya Cucu witũ','Wendo ndũthiraga; ũtũũraga thĩinĩ wa ngoro ciitũ.','Tũririkana Cucu witũ ti nĩ mĩthenya na mĩaka tu, no nĩ wendo wake, mahoya make, ciugo cia hinya na ihinda iria tũtũũraga hamwe nake. Rĩrĩa tũrĩ na kĩeha, no tũcookerie Ngai ngaatho nĩ ũndũ wa wendo ũrĩa twamũheire na ũrĩa atũheire.',[['Maũndũ atũrutĩte','Ririkana wendo wake, wĩtĩkio na ũrĩa aheaga andũ hinya.'],['Heana kĩririkanio gĩaku','Andika kĩririkanio gĩaku kĩa Cucu witũ kana ũrutani ũrĩa akũheire.'],['Mĩtugo yake','Tũtũũrie wendo wake tũkĩigua arĩa angĩ na tũkĩmahe ũteithio.']]],
 'eulogy.html':['CIUGO CIA KŨRIRIKANA CUCŨ WITŨ','Ciugo cia kũririkana Hannah Nyambura Karanja','Cucu witũ Wa Ruth, tũkũririkana na wendo mũingĩ.','Ũmũthĩ tũrĩ na kĩeha nĩ ũndũ wa gũtirĩ na Cucu witũ hamwe na ithuĩ. No nĩtũcookeria Ngai ngaatho nĩ ũndũ wa ũtũũro wa Hannah. Cucu witũ aarĩ mũndũ wendwo mũno, na nĩatũheire wendo, mahoya na hinya. Wĩtĩkio wake watũheire mwĩhoko. Tũmũririkana mũno, na wendo wake ũgũtũũra ngoro-inĩ ciitũ na thĩinĩ wa arĩa othe aamendete.',[['Ngoro ĩrĩa yaiguaga','Cucu witũ nĩathikĩrĩriaga andũ na akĩmahe ciugo cia ũhooti.'],['Wĩtĩkio wake','Nĩatũrutire kũhooya, kwĩtĩkia Ngai na gũikara na mwĩhoko.'],['Mĩtugo ya wendo','Tũhota gũtũũria mĩtugo yake tũkĩteithagia arĩa marĩ na kĩeha na tũkĩruta wega.'],['Nĩ wega, Cucu witũ','Nĩtũcookeria Ngai ngaatho nĩ ũndũ wa wendo, mahoya na ũhooti waku. Tũgũkũririkana na wendo.']]],
@@ -227,9 +227,34 @@ function render(lang){
  const titleProtocol=isSw?'MAREHEMU · KWA KUMBUKUMBU YA UPENDO':lang==='ki'?'TŨKŨRIRIKANA NA WENDO':'IN LOVING MEMORY';
  const dateLine=isSw?'7 Oktoba 2026 · Tunamkumbuka kwa upendo':lang==='ki'?'7 Oktoba 2026 · Tũkũririkana na wendo':'7 October 2026 · In loving memory';
  const cta=isSw?['Soma hotuba','Andika ujumbe','Tazama picha']:lang==='ki'?['Thoma ciugo cia kũririkana','Andika ciugo','Rora mbica']:['Read the eulogy','Write a tribute','View photos'];
+ const verseLanguage=['en','ki','sw'].includes(lang)?lang:'en';
+ const scripture={
+  en:[
+   ['The LORD is close to the brokenhearted and saves those who are crushed in spirit.','PSALM 34:18 · NIV','https://www.bible.com/bible/111/PSA.34.18.NIV'],
+   ['Blessed are those who mourn, for they will be comforted.','MATTHEW 5:4 · NIV','https://www.bible.com/bible/111/MAT.5.4.NIV'],
+   ['I can do all this through him who gives me strength.','PHILIPPIANS 4:13 · NIV','https://www.bible.com/bible/111/PHP.4.13.NIV'],
+   ['The LORD is near to all who call on him, to all who call on him in truth.','PSALM 145:18 · NIV','https://www.bible.com/bible/111/PSA.145.18.NIV']
+  ],
+  ki:[
+   ['MWATHANI akoragwo hakuhĩ na arĩa makuĩte ngoro, na nĩahonokagia arĩa mwĩhoko wao ũthirĩĩte.','THABURI 34:18 · GKN','https://www.bible.com/bible/1201/PSA.34.18.GKN'],
+   ['Kũraathimwo-rĩ, nĩ arĩa maracakaya; nĩ ũndũ nĩmakoomĩrĩrio!','MATHAYO 5:4 · GKN','https://www.bible.com/bible/1201/MAT.5.4.GKN'],
+   ['Nĩhotaga gwĩka maũndũ moothe na ũndũ wake ũrĩa ũheaga hinya.','AFILIPI 4:13 · GKN','https://www.bible.com/bible/1201/PHP.4.13.GKN'],
+   ['MWATHANI akoragwo hakuhĩ na arĩa oothe mamũkayagĩra; o arĩa mamũkayagĩra na ngoro yothe.','THABURI 145:18 · GKN','https://www.bible.com/bible/1201/PSA.145.18.GKN']
+  ],
+  sw:[
+   ['Mwenyezi-Mungu yu karibu na waliokufa moyo; huwaokoa wote waliokata tamaa kabisa.','ZABURI 34:18 · BHN','https://www.bible.com/bible/74/PSA.34.18.BHN'],
+   ['Heri walio na huzuni, maana watafarijiwa.','MATHAYO 5:4 · BHN','https://www.bible.com/bible/74/MAT.5.4.BHN'],
+   ['Naweza kuikabili kila hali kwani Kristo hunipa nguvu.','WAFILIPI 4:13 · BHN','https://www.bible.com/bible/74/PHP.4.13.BHN'],
+   ['Mwenyezi-Mungu yuko karibu na wote wanaomwomba, wote wanaomwomba kwa moyo mnyofu.','ZABURI 145:18 · BHN','https://www.bible.com/bible/74/PSA.145.18.BHN']
+  ]
+ };
+ const pKey=key();
+ const rows=pKey==='prayers.html'?scripture[verseLanguage]:(pKey==='eulogy.html'?[scripture[verseLanguage][0]]:[]);
+ const scriptureHeading=verseLanguage==='ki'?'MAANDĨKO MATHERU':verseLanguage==='sw'?'MISTARI YA BIBLIA':'BIBLE VERSES';
+ const scriptureHtml=rows.length?'<section class="kikuyu-section bible-verses"><h2>'+scriptureHeading+'</h2>'+rows.map(v=>'<blockquote lang="'+verseLanguage+'">“'+v[0]+'”</blockquote><p><small><a href="'+v[2]+'" target="_blank" rel="noopener noreferrer">'+v[1]+' ↗</a></small></p>').join('')+'</section>':'';
  const panel=document.getElementById('kikuyuPage');
  panel.lang=lang;
- panel.innerHTML='<section class="page-hero kikuyu-hero"><p class="late-protocol">'+titleProtocol+'</p><p class="eyebrow">'+d[0]+'</p><div class="cross" aria-hidden="true">✝</div><h1 class="kikuyu-title-honour">'+d[1]+'</h1><p>'+d[2]+'</p><small>'+dateLine+'</small></section><main class="page-content kikuyu-content"><p class="lead">'+d[3]+'</p>'+d[4].map(s=>'<section class="kikuyu-section"><h2>'+s[0]+'</h2><p>'+s[1]+'</p></section>').join('')+'<div class="page-cta"><a class="button primary" href="eulogy.html">'+cta[0]+' →</a><a class="button outline" href="tributes.html">'+cta[1]+' →</a><a class="button outline" href="gallery.html">'+cta[2]+' →</a></div></main>';
+ panel.innerHTML='<section class="page-hero kikuyu-hero"><p class="late-protocol">'+titleProtocol+'</p><p class="eyebrow">'+d[0]+'</p><div class="cross" aria-hidden="true">✝</div><h1 class="kikuyu-title-honour">'+d[1]+'</h1><p>'+d[2]+'</p><small>'+dateLine+'</small></section><main class="page-content kikuyu-content"><p class="lead">'+d[3]+'</p>'+scriptureHtml+d[4].map(s=>'<section class="kikuyu-section"><h2>'+s[0]+'</h2><p>'+s[1]+'</p></section>').join('')+'<div class="page-cta"><a class="button primary" href="eulogy.html">'+cta[0]+' →</a><a class="button outline" href="tributes.html">'+cta[1]+' →</a><a class="button outline" href="gallery.html">'+cta[2]+' →</a></div></main>';
 }
 function setLang(lang){
  const selected=['en','ki','sw'].includes(lang)?lang:'en';
