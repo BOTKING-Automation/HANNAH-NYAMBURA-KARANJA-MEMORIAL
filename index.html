@@ -171,14 +171,17 @@ button{font:inherit}
 @media(max-width:880px){.site-header{min-height:72px;flex-wrap:wrap}.menu-toggle{display:block;margin-left:auto}.header-cta{display:none}.main-nav{display:none;order:4;width:100%;padding:9px 0 20px;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 12px}.main-nav.is-open{display:grid}.main-nav a{padding:10px 0;font-size:9px;border-bottom:1px solid rgba(194,161,100,.18)}.language-picker{margin-left:0;padding-left:0;border-left:0;justify-content:flex-start}.language-picker button{padding:7px}.hero{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);min-height:0;padding-block:65px 80px}.hero h1{font-size:clamp(46px,7.4vw,72px)}.portrait-stage{min-height:420px}.portrait-inner{min-height:350px}.portrait-card{width:330px}.floating-note{right:-5%;bottom:3%;max-width:190px}.side-vertical{display:none}.intro-grid{grid-template-columns:.45fr 1.55fr;gap:35px}.page-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.site-header{padding-inline:18px}.brand-symbol{width:34px;height:34px}.brand-copy strong{font-size:8px}.brand-copy span{font-size:7px}.main-nav.is-open{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{display:flex;flex-direction:column;align-items:stretch;padding:56px 24px 73px;gap:25px}.hero:before{inset:10px}.hero-copy{order:0}.hero h1{font-size:clamp(48px,13vw,70px)}.hero-alias{font-size:20px}.hero-description{font-size:13px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-detail{flex-wrap:wrap;font-size:8px}.portrait-stage{order:1;min-height:350px;margin:0 8px}.portrait-orbit{inset:4% 1%}.portrait-card{width:min(84%,310px)}.portrait-inner{min-height:330px}.portrait-monogram{width:120px;height:120px;font-size:72px}.floating-note{right:-7px;bottom:0;max-width:165px;padding:12px 14px}.floating-note p{font-size:18px}.scroll-cue{bottom:18px;white-space:nowrap}.section{padding:62px 23px}.section-heading{margin-bottom:31px}.section-heading h2{font-size:43px}.intro-grid{grid-template-columns:1fr;gap:26px}.intro-marker{display:flex;align-items:center;gap:16px;padding-top:10px}.intro-marker strong{margin-top:0;font-size:34px}.intro-marker small{margin:0}.values-grid{grid-template-columns:1fr;gap:12px}.value-card{min-height:0;padding:25px}.value-card .card-number{margin-top:19px}.eulogy-feature{grid-template-columns:1fr}.feature-aside{min-height:310px;padding:35px}.feature-cross{position:absolute;right:40px;top:70px;font-size:100px;opacity:.4}.feature-aside blockquote{max-width:300px;font-size:27px}.feature-copy{padding:45px 27px 52px}.page-cards{grid-template-columns:1fr}.page-card{min-height:170px;padding:22px}.page-card h3{margin-top:15px}.scripture-section:before{left:-35px}.scripture-section:after{right:-35px}.scripture-quote{font-size:35px}.site-footer{align-items:flex-start;flex-direction:column;padding:28px 22px}.footer-note{text-align:left;max-width:100%}.footer-links{gap:12px}}
 
-/* Honour her name with a gentle arrival; let the dove pass quietly through the memorial sky. */
+/* A quiet, dignified arrival with a soft pearl-blue glow and a gentle champagne pulse. */
 .hero-title-honour {
   transform-origin: left center;
-  animation: waRuthTitleRise 1.8s cubic-bezier(.16, 1, .3, 1) .12s both;
+  text-shadow: 0 0 14px rgba(224, 233, 247, .12);
+  animation: waRuthTitleRise 1.8s cubic-bezier(.16, 1, .3, 1) .12s both,
+             waRuthPearlGlow 5.8s ease-in-out 2s infinite;
 }
 .hero-title-honour em {
-  text-shadow: 0 0 10px rgba(234, 216, 168, .12);
-  animation: waRuthGoldGlow 2.8s ease-out 1s both;
+  color: #f0dfb4;
+  text-shadow: 0 0 10px rgba(240, 223, 180, .15);
+  animation: waRuthGoldGlow 5.8s ease-in-out 2s infinite;
 }
 /* The real dove video is supplied by the family and sits quietly at the hero's top-right. */
 .dove-video-wrap {
@@ -196,10 +199,25 @@ button{font:inherit}
   68% { opacity: 1; transform: translateY(-1px) scale(1.012); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
+@keyframes waRuthPearlGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(224, 233, 247, .08),
+                 0 0 22px rgba(154, 185, 225, .04);
+  }
+  50% {
+    text-shadow: 0 0 17px rgba(224, 233, 247, .32),
+                 0 0 36px rgba(154, 185, 225, .16);
+  }
+}
 @keyframes waRuthGoldGlow {
-  0% { text-shadow: 0 0 0 rgba(234, 216, 168, 0); }
-  42% { text-shadow: 0 0 28px rgba(234, 216, 168, .38); }
-  100% { text-shadow: 0 0 10px rgba(234, 216, 168, .12); }
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(240, 223, 180, .12),
+                 0 0 18px rgba(195, 165, 110, .04);
+  }
+  50% {
+    text-shadow: 0 0 17px rgba(240, 223, 180, .38),
+                 0 0 31px rgba(195, 165, 110, .15);
+  }
 }
 @media(max-width:880px) {
   .hero { padding-top: 102px; }
