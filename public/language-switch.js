@@ -18,7 +18,7 @@ const swPages={
     "KUMBUKUMBU YA UPENDO · IMANI INAYODUMU",
     "Hannah Nyambura Karanja (Wa Ruth)",
     "Mtu wa thamani hasahauliki; upendo wake hubaki mioyoni mwetu.",
-    "Tunamkumbuka Wa Ruth kwa upendo mwingi. Alikuwa nyanya mpendwa mwenye moyo wa kimama, aliyesikiliza, kutia moyo, kusali na kuwasaidia watu kupata tumaini. Familia na marafiki wana kumbukumbu zao za kipekee, na kila kumbukumbu ni sehemu ya urithi wake.",
+    "Tunamkumbuka Wa Ruth kwa upendo mwingi. Alikuwa bibi mpendwa mwenye moyo wa kimama, aliyesikiliza, kutia moyo, kusali na kuwasaidia watu kupata tumaini. Familia na marafiki wana kumbukumbu zao za kipekee, na kila kumbukumbu ni sehemu ya urithi wake.",
     [
       [
         "Upendo unaoendelea",
@@ -38,7 +38,7 @@ const swPages={
     "MAISHA YAKE · IMANI · URITHI",
     "Hadithi ya Hannah Nyambura Karanja",
     "Wa Ruth alikuwa mtu wa thamani sana kwa familia yake na kwa waliomfahamu.",
-    "Wa Ruth alikuwa nyanya mpendwa na mtu mwenye moyo wa upendo kwa familia na jamii. Anakumbukwa kwa kusikiliza kwa makini, kutia moyo, kusali na kuwasaidia watu wasijisikie peke yao. Kila mmoja ana kumbukumbu yake ya Wa Ruth; kwa pamoja, kumbukumbu hizi huhifadhi urithi wake.",
+    "Wa Ruth alikuwa bibi mpendwa na mtu mwenye moyo wa upendo kwa familia na jamii. Anakumbukwa kwa kusikiliza kwa makini, kutia moyo, kusali na kuwasaidia watu wasijisikie peke yao. Kila mmoja ana kumbukumbu yake ya Wa Ruth; kwa pamoja, kumbukumbu hizi huhifadhi urithi wake.",
     [
       [
         "Mtu wa thamani",
@@ -78,7 +78,7 @@ const swPages={
     "MANENO YA KUMBUKUMBU",
     "Hotuba ya kumbukumbu ya Hannah Nyambura Karanja",
     "Wa Ruth, tunakukumbuka kwa upendo mwingi.",
-    "Leo mioyo yetu imejaa huzuni kwa sababu Hannah hayupo tena nasi, lakini tunamshukuru Mungu kwa zawadi ya maisha yake. Alikuwa nyanya mpendwa aliyetoa upendo, sala na kutia moyo. Imani yake iliwasaidia wengi kupata tumaini. Tunamkosa, na upendo wake unaendelea kuishi ndani ya familia na wote aliowagusa.",
+    "Leo mioyo yetu imejaa huzuni kwa sababu Hannah hayupo tena nasi, lakini tunamshukuru Mungu kwa zawadi ya maisha yake. Alikuwa bibi mpendwa aliyetoa upendo, sala na kutia moyo. Imani yake iliwasaidia wengi kupata tumaini. Tunamkosa, na upendo wake unaendelea kuishi ndani ya familia na wote aliowagusa.",
     [
       [
         "Moyo uliosikiliza",
