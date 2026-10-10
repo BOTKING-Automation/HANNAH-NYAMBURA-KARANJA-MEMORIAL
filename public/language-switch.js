@@ -225,9 +225,9 @@ function addUI(){const h=document.querySelector('header');if(!h||document.getEle
 function render(lang){
  const isSw=lang==='sw';
  const d=(isSw?swPages:pages)[key()]||(isSw?swPages:pages)['index.html'];
- const titleProtocol=isSw?'MAREHEMU · KWA KUMBUKUMBU YA UPENDO':'THE LATE · IN LOVING MEMORY';
- const dateLine=isSw?'7 Oktoba 2026 · Tunamkumbuka kwa upendo':'7 October 2026 · Tũkũririkana na wendo';
- const cta=isSw?['Soma hotuba','Andika ujumbe','Tazama picha']:['Ũrĩke eulogy','Andika ciugo','Rora mbica'];
+ const titleProtocol=isSw?'MAREHEMU · KWA KUMBUKUMBU YA UPENDO':lang==='ki'?'TŨKŨRIRIKANA NA WENDO':'IN LOVING MEMORY';
+ const dateLine=isSw?'7 Oktoba 2026 · Tunamkumbuka kwa upendo':lang==='ki'?'7 Oktoba 2026 · Tũkũririkana na wendo':'7 October 2026 · In loving memory';
+ const cta=isSw?['Soma hotuba','Andika ujumbe','Tazama picha']:lang==='ki'?['Thoma ciugo cia kũririkana','Andika ciugo','Rora mbica']:['Read the eulogy','Write a tribute','View photos'];
  const panel=document.getElementById('kikuyuPage');
  panel.lang=lang;
  panel.innerHTML='<section class="page-hero kikuyu-hero"><p class="late-protocol">'+titleProtocol+'</p><p class="eyebrow">'+d[0]+'</p><div class="cross" aria-hidden="true">✝</div><h1 class="kikuyu-title-honour">'+d[1]+'</h1><p>'+d[2]+'</p><small>'+dateLine+'</small></section><main class="page-content kikuyu-content"><p class="lead">'+d[3]+'</p>'+d[4].map(s=>'<section class="kikuyu-section"><h2>'+s[0]+'</h2><p>'+s[1]+'</p></section>').join('')+'<div class="page-cta"><a class="button primary" href="eulogy.html">'+cta[0]+' →</a><a class="button outline" href="tributes.html">'+cta[1]+' →</a><a class="button outline" href="gallery.html">'+cta[2]+' →</a></div></main>';
