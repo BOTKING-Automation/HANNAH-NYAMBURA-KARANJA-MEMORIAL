@@ -529,7 +529,7 @@ button{font:inherit}
   "Tributes": "Ujumbe wa kumbukumbu",
   "Prepare a personal message to honour her memory and share it with family.": "Andaa ujumbe binafsi wa kuheshimu kumbukumbu yake na kuushiriki na familia.",
   "Write a tribute": "Andika ujumbe",
-  "“The Lord is close to the brokenhearted and saves those who are crushed in spirit.”": "“Bwana yu karibu na waliovunjika moyo, naye huwaokoa waliopondeka rohoni.”",
+  "“The LORD is close to the brokenhearted and saves those who are crushed in spirit.”": "“Mwenyezi-Mungu yu karibu na waliokufa moyo; huwaokoa wote waliokata tamaa kabisa.”",
   "Faith does not ask us to stop missing her. It gives us somewhere to take the tears, and someone to lean on when our own strength runs low.": "Imani haitulazimishi kuacha kumkosa. Hutupa mahali pa kupeleka machozi yetu na mtu wa kumtegemea nguvu zetu zinapopungua.",
   "Continue to faith &amp; prayer": "Endelea kwenye imani na sala",
   "Continue to faith & prayer": "Endelea kwenye imani na sala",
@@ -538,7 +538,11 @@ button{font:inherit}
   "Pause for a moment. Remember her face, whisper her name, thank God for the time you had, or simply sit with the love and the ache. You do not have to find the perfect words.": "Tulia kwa muda. Kumbuka uso wake, tamka jina lake kwa sauti ya chini, mshukuru Mungu kwa muda mliokuwa pamoja, au kaa tu na upendo pamoja na maumivu. Huhitaji kutafuta maneno makamilifu.",
   "Light a remembrance candle": "Washa mshumaa wa kumbukumbu",
   "Created with love to honour a precious life. Gĩkũyũ wording is an initial draft for family review.": "Imetengenezwa kwa upendo ili kuheshimu maisha yenye thamani.",
-  "The Late Hannah Nyambura <em>Karanja</em>": "Marehemu Hannah Nyambura <em>Karanja</em>"
+  "PSALM 34:18 · NIV": "ZABURI 34:18 · BHN",
+"MATTHEW 5:4 · NIV": "MATHAYO 5:4 · BHN",
+"PHILIPPIANS 4:13 · NIV": "WAFILIPI 4:13 · BHN",
+"PSALM 145:18 · NIV": "ZABURI 145:18 · BHN",
+"The Late Hannah Nyambura <em>Karanja</em>": "Marehemu Hannah Nyambura <em>Karanja</em>"
 };
  function setLanguage(lang){document.documentElement.lang=lang==='ki'?'ki':lang==='sw'?'sw':'en';languageText.forEach(el=>{const v=lang==='sw'?(swTranslations[el.dataset.en]||el.dataset.en):el.dataset[lang];if(v!==undefined)el.innerHTML=v});languageButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('hannah-memorial-language',lang)}catch(_){}}
  languageButtons.forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
