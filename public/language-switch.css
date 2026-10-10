@@ -3,3 +3,85 @@
 .late-protocol{position:relative;margin:0 auto 12px!important;color:#9c814f!important;font:700 9px/1.5 'DM Sans',Arial,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase}
 .kikuyu-page .kikuyu-hero .late-protocol{margin-bottom:13px!important}
 @media print{.late-protocol{color:#8d7448!important}}
+
+/* Match the Gĩkũyũ view to the memorial's midnight-blue, pearl and champagne theme. */
+.kikuyu-page .kikuyu-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fffdf8;
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(195,165,110,.16), transparent 34%),
+    radial-gradient(ellipse at 12% 92%, rgba(83,119,164,.16), transparent 36%),
+    linear-gradient(132deg, #101d31 0%, #1d3150 55%, #263f5d 100%);
+}
+.kikuyu-page .kikuyu-hero::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: -1;
+  border: 1px solid rgba(240,223,180,.2);
+  pointer-events: none;
+}
+.kikuyu-page .kikuyu-hero .eyebrow,
+.kikuyu-page .kikuyu-hero .cross { color: #f0dfb4; }
+.kikuyu-page .kikuyu-hero .late-protocol { color: #d8c79e !important; }
+.kikuyu-page .kikuyu-hero > p:not(.eyebrow):not(.late-protocol) {
+  color: #d6dde8;
+}
+.kikuyu-page .kikuyu-hero small { color: #d8c79e; }
+.kikuyu-page .kikuyu-hero h1.kikuyu-title-honour {
+  position: relative;
+  color: #fffdf8;
+  text-shadow: 0 0 14px rgba(224,233,247,.12);
+  animation: kikuyuTitleRise 1.8s cubic-bezier(.16,1,.3,1) .12s both,
+             kikuyuPearlGlow 5.8s ease-in-out 2s infinite;
+}
+.kikuyu-page .kikuyu-hero h1.kikuyu-title-honour::after {
+  content: "";
+  display: block;
+  width: min(180px, 42%);
+  height: 1px;
+  margin: 17px auto 0;
+  background: linear-gradient(90deg, transparent, #c3a56e, #f0dfb4, transparent);
+  box-shadow: 0 0 14px rgba(240,223,180,.24);
+  transform-origin: center;
+  animation: kikuyuChampagneLine 5.8s ease-in-out 2s infinite;
+}
+.kikuyu-page .kikuyu-content .lead { color: #4d5a70; }
+.kikuyu-page .kikuyu-section { border-bottom-color: rgba(195,165,110,.32); }
+.kikuyu-page .kikuyu-section h2 { color: #172843; }
+.kikuyu-page .kikuyu-section p { color: #5e6a7f; }
+
+@keyframes kikuyuTitleRise {
+  0% { opacity: 0; transform: translateY(16px) scale(.97); }
+  72% { opacity: 1; transform: translateY(-1px) scale(1.008); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes kikuyuPearlGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(224,233,247,.08),
+                 0 0 22px rgba(154,185,225,.04);
+  }
+  50% {
+    text-shadow: 0 0 17px rgba(224,233,247,.30),
+                 0 0 36px rgba(154,185,225,.15);
+  }
+}
+@keyframes kikuyuChampagneLine {
+  0%, 100% { opacity: .62; transform: scaleX(.84); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .kikuyu-page .kikuyu-hero h1.kikuyu-title-honour,
+  .kikuyu-page .kikuyu-hero h1.kikuyu-title-honour::after {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    text-shadow: none;
+  }
+}
+@media(max-width:700px) {
+  .kikuyu-page .kikuyu-hero::before { inset: 8px; }
+  .kikuyu-page .kikuyu-hero h1.kikuyu-title-honour { font-size: clamp(34px, 9vw, 49px); }
+}
