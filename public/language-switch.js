@@ -249,7 +249,7 @@ function render(lang){
   ]
  };
  const pKey=key();
- const rows=pKey==='prayers.html'?scripture[verseLanguage]:(pKey==='eulogy.html'?[scripture[verseLanguage][0]]:[]);
+ const rows=pKey==='prayers.html'?scripture[verseLanguage]:(['eulogy.html','index.html'].includes(pKey)?[scripture[verseLanguage][0]]:[]);
  const scriptureHeading=verseLanguage==='ki'?'MAANDĨKO MATHERU':verseLanguage==='sw'?'MISTARI YA BIBLIA':'BIBLE VERSES';
  const scriptureHtml=rows.length?'<section class="kikuyu-section bible-verses"><h2>'+scriptureHeading+'</h2>'+rows.map(v=>'<blockquote lang="'+verseLanguage+'">“'+v[0]+'”</blockquote><p><small><a href="'+v[2]+'" target="_blank" rel="noopener noreferrer">'+v[1]+' ↗</a></small></p>').join('')+'</section>':'';
  const panel=document.getElementById('kikuyuPage');
