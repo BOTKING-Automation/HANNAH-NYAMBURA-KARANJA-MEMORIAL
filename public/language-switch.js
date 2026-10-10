@@ -240,7 +240,7 @@ function setLang(lang){
  render(selected);
  document.querySelectorAll('header nav a').forEach(a=>{
   const k=(a.getAttribute('href')||'').replace('.html','').replace('/','');
-  const ki={index:'Mũciĩ',story:'Ũhoro wake',memories:'Mĩrĩgo',eulogy:'Eulogy',service:'Mũthenya wa kũruta',gallery:'Mbica',prayers:'Mahoya',tributes:'Ciugo',family:'Familia','editing-guide':'Ũruti'};
+  const ki={index:'Mũciĩ',story:'Ũhoro wake',memories:'Maũndũ tũririkanaga',eulogy:'Ciugo cia kũririkana',service:'Ibada',gallery:'Mbica',prayers:'Mahoya',tributes:'Ciugo cia wendo',family:'Nyũmba','editing-guide':'Ũruti wa website'};
   const en={index:'Home',story:'Her Story',memories:'Memories',eulogy:'Eulogy',service:'Farewell',gallery:'Gallery',prayers:'Faith & Prayer',tributes:'Tributes',family:'Family','editing-guide':'Editing Guide'};
   const swNav={index:'Mwanzo',story:'Hadithi yake',memories:'Kumbukumbu',eulogy:'Hotuba',service:'Kuaga',gallery:'Picha',prayers:'Imani na sala',tributes:'Ujumbe',family:'Familia','editing-guide':'Mwongozo'};
   const dict=selected==='ki'?ki:selected==='sw'?swNav:en;
